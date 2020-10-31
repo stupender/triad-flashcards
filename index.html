@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Triad Practice Flashcards</title>
+  <meta charset="UTF-8"/>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="script.js" type="text/javascript"></script>
+</head>
+<body>
+  <div>
+    <h1 id="title">
+      TRIAD FLASHCARDS
+    </h1>
+    <p id="description">
+      This app generates a root position triad for practice on the guitar.
+      </br></br>
+      You'll be tested on the following: <b>root name</b>, <b>triad quality</b>, & <b>string set</b>.
+      <!-- <ol>
+        <li>Root Name</li>
+        <li>Triad Quality</li>
+        <li>String Set</li>
+      </ol> -->
+    </p>
+    <button onclick="flashcards()">Generate New Triad!</button>  
+    <h2 id="chord">
+
+    </h2>
+  </div>
+
+  <script>
+    function triadRootGen() {
+      let notes = ["A", "A#", "Bb", "B", "C", "C#", "Db", "D", "D#", "Eb", "E", "F", "F#", "Gb", "G", "G#", "Ab"];
+      let randomOption = Math.floor(Math.random() * notes.length);
+      return notes[randomOption];
+    }
+    function triadQualityGen() {
+      let qualities = ["major", "minor", "diminished"];
+      let randomOption = Math.floor(Math.random() * qualities.length);
+      return qualities[randomOption];
+    }
+    function stringSetGen() {
+      let qualities = ["Low E, A, & D strings", "A, D, & G strings", "D, G, & B strings", "G, B, & High E strings"];
+      let randomOption = Math.floor(Math.random() * qualities.length);
+      return qualities[randomOption];
+    }
+    function flashcards() {
+      var text = document.getElementById("chord");
+      let root = triadRootGen();
+      let quality = triadQualityGen();
+      let strings = stringSetGen();
+      text.innerHTML = root + " " + quality + " " + "on the " + strings + ".";
+    }
+
+  </script>
+
+</body>
+</html>
