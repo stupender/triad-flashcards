@@ -9,25 +9,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div>
-    <h1 id="title">
-      TRIAD FLASHCARDS
-    </h1>
-    <p id="description">
-      This app generates a root position triad for practice on the guitar.
-      </br></br>
-      You'll be tested on the following: <b>root name</b>, <b>triad quality</b>, & <b>string set</b>.
-      <!-- <ol>
-        <li>Root Name</li>
-        <li>Triad Quality</li>
-        <li>String Set</li>
-      </ol> -->
-    </p>
-    <button id="generator" onclick="flashcards()">Generate New Triad!</button>  
-    <h2 id="chord">
-
-    </h2>
-  </div>
+    <div>
+      <h1 id="title">
+        TRIAD FLASHCARDS
+      </h1>
+      <p id="description">
+        This app generates a root position triad for practice on the guitar.
+        </br></br>
+        You'll be tested on the following: <b>root name</b>, <b>triad quality</b>, & <b>string set</b>.
+        Click the button below to randomly generate a new triad.
+        <!-- <ol>
+          <li>Root Name</li>
+          <li>Triad Quality</li>
+          <li>String Set</li>
+        </ol> -->
+      </p>
+      <button id="generator" onclick="flashcards()">Generate New Triad!</button>  
+      <h2 id="chord"></h2>
+    </div>
 
   <script>
     function triadRootGen() {
@@ -52,7 +51,6 @@
       let strings = stringSetGen();
       text.innerHTML = root + " " + quality + " " + "on the " + strings;
     }
-
   </script>
 
 </body>
